@@ -479,26 +479,26 @@ html,body{
 /* New CSS for the text */
 .special-text {
     position: fixed;
-    margin-bottom: 10px;
-    top: 6%;
-    left: 20%;
-    right: 20%;
+    top: 5%;                /* un poco más arriba */
+    left: 50%;              /* centrado horizontal */
     transform: translateX(-50%);
     color: #ffa3f9;
     font-family: Arial, sans-serif;
-    font-size: 5vmin; /* aumentado para mayor tamaño visual */
+    font-size: 6vmin;       /* un poco más grande que antes */
     text-shadow: 0 0 1vmin rgba(198,163,255,0.5);
-    z-index: 2001; /* Subido para estar por encima de night y decoraciones */
+    z-index: 2001;
     opacity: 0;
     animation: fadeIn 3s 1s forwards;
     text-align: center;
-    pointer-events: none; /* Para que no bloquee clics */
+    max-width: 80%;         /* evita que se salga de los lados */
+    pointer-events: none;
 }
 
-/* Aumenta el tamaño de fuente en móviles */
+/* En móviles subimos el tamaño */
 @media (max-width: 480px) {
   .special-text {
-    font-size: 20px;
+    font-size: 8vmin;   /* relativo al ancho de pantalla */
+    top: 8%;            /* baja un poco en pantallas chicas */
   }
 }
 
