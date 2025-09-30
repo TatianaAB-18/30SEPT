@@ -496,9 +496,9 @@ html,body{
 }
 
 /* Aumenta el tamaño de fuente en móviles */
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .special-text {
-    font-size: 10vw;
+    font-size: 20px;
   }
 }
 
