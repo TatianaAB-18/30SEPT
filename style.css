@@ -45,7 +45,7 @@ html,body{
 /* ---- Ramo anclado al suelo (funciona en escritorio y móvil) ---- */
 .flowers {
   position: relative;
-  transform: scale(0.6); /* Antes: 0.7, ahora más grande */
+  transform: scale(0.8); /* Antes: 0.7, ahora más grande */
   z-index: 2;
 }
 
