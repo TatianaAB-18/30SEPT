@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PARA MI BEBÉ LINDO ❤️😍</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- pantalla inicial -->
+ <div id="pantalla-inicio" style="position:fixed;z-index:99999;top:0;left:0;width:100vw;height:100vh;background:#0a2a5a;display:flex;align-items:center;justify-content:center;flex-direction:column;">
+    <button id="btn-iniciar" style="font-size:2rem;padding:1em 2em;border-radius:1em;border:none;background:#fffbe7;color:#0a2a5a;box-shadow:0 2px 18px #0005;cursor:pointer;">apreta aquí</button>
+  </div>
+  <div class="night"></div>
+
+
+  <!-- pantalla de flores -->
+<div class="special-text">
+  Feliz 30 de septiembre❤!
+  Te Amo Mucho Mi Vida
+</div>
+
+<!-- 👇 Mensaje solo para las flores -->
+<div id="mensajeFlores" class="mensaje-flores">
+  🌼 Da click en las imágenes 🌼
+</div>
+
+  <!-- Detalles decorativos Hot Wheels -->
+  <div class="hotwheels-decor">
+    <!-- Destellos animados -->
+    <div class="sparkle sparkle--1"></div>
+    <div class="sparkle sparkle--2"></div>
+    <div class="sparkle sparkle--3"></div>
+    <div class="sparkle sparkle--4"></div>
+    <div class="sparkle sparkle--5"></div>
+    <!-- Líneas de velocidad -->
+    <div class="speedline speedline--1"></div>
+    <div class="speedline speedline--2"></div>
+    <div class="speedline speedline--3"></div>
+    <!-- Partículas flotantes -->
+    <div class="hw-particle hw-particle--1"></div>
+    <div class="hw-particle hw-particle--2"></div>
+    <div class="hw-particle hw-particle--3"></div>
+    <div class="hw-particle hw-particle--4"></div>
+    <div class="hw-particle hw-particle--5"></div>
+  </div>
+  
+
+   <!-- Modal para mostrar la imagen y el mensaje (fuera de .flowers para no bloquear clics) -->
+  <div id="modal-flor" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); align-items:center; justify-content:center; flex-direction:column;">
+    <span id="cerrar-modal" style="position:absolute; top:2vmin; right:4vmin; font-size:5vmin; color:#fff; cursor:pointer; font-family:sans-serif;">&times;</span>
+    <img id="modal-img" src="" alt="Hot Wheels" style="max-width:80vw; max-height:60vh; border-radius:2vmin; box-shadow:0 0 30px #fff8; margin-bottom:2vmin;">
+    <div id="modal-msg" style="color:#fff; font-size:3vmin; text-align:center; max-width:80vw; font-family: 'Segoe UI', Arial, sans-serif;"></div>
+  </div>
+  <div class="flowers">
+  <div class="flower flower--1" style="left: 0%; bottom: 18vmin; transform: rotate(-40deg); animation: moving-flower-1 4s linear infinite;" onclick="mostrarModalFlor(0)">
+  <img class="flower__img--bg" src="https://i.postimg.cc/RhKXtRwp/a20fa7fa0c256ea866ceffbc27989923.png" alt="Fondo flor" draggable="false" style="position:absolute; left:50%; top:-3vmin; transform:translateX(-50%); width:32vmin; height:32vmin; z-index:1; opacity:0.95; pointer-events:none; user-select:none;"/>
+  <img src="img/carro1.jpg" alt="" style="width: 24vmin; height: 24vmin; border-radius: 50%; object-fit: cover; position: absolute; left: 50%; top: 0; transform: translateX(-50%); box-shadow: 0 2px 18px #0005; z-index: 10; animation: blooming-flower 2s backwards;">
+      <div class="flower__line" style="animation: grow-flower-tree 4s backwards;"></div>
+    </div>
+  <div class="flower flower--2" style="left: 10%; bottom: 20vmin; transform: rotate(-30deg); animation: moving-flower-2 4s linear infinite;" onclick="mostrarModalFlor(1)">
+  <img class="flower__img--bg" src="https://i.postimg.cc/RhKXtRwp/a20fa7fa0c256ea866ceffbc27989923.png" alt="Fondo flor" draggable="false" style="position:absolute; left:50%; top:-3vmin; transform:translateX(-50%); width:32vmin; height:32vmin; z-index:1; opacity:0.95; pointer-events:none; user-select:none;"/>
+  <img src="img/carro2.webp" alt="" style="width: 24vmin; height: 24vmin; border-radius: 50%; object-fit: cover; position: absolute; left: 50%; top: 0; transform: translateX(-50%); box-shadow: 0 2px 18px #0005; z-index: 10; animation: blooming-flower 2s 0.2s backwards;">
+      <div class="flower__line" style="animation: grow-flower-tree 4s 0.2s backwards;"></div>
+    </div>
+  <div class="flower flower--3" style="left: 20%; bottom: 16vmin; transform: rotate(-20deg); animation: moving-flower-3 4s linear infinite;" onclick="mostrarModalFlor(2)">
+  <img class="flower__img--bg" src="https://i.postimg.cc/RhKXtRwp/a20fa7fa0c256ea866ceffbc27989923.png" alt="Fondo flor" draggable="false" style="position:absolute; left:50%; top:-3vmin; transform:translateX(-50%); width:32vmin; height:32vmin; z-index:1; opacity:0.95; pointer-events:none; user-select:none;"/>
+  <img src="img/carro3.webp" alt="" style="width: 24vmin; height: 24vmin; border-radius: 50%; object-fit: cover; position: absolute; left: 50%; top: 0; transform: translateX(-50%); box-shadow: 0 2px 18px #0005; z-index: 10; animation: blooming-flower 2s 0.4s backwards;">
+      <div class="flower__line" style="animation: grow-flower-tree 4s 0.4s backwards;"></div>
+    </div>
+  <div class="flower flower--4" style="left: 30%; bottom: 22vmin; transform: rotate(-10deg); animation: moving-flower-4 3.5s linear infinite;" onclick="mostrarModalFlor(3)">
+  <img class="flower__img--bg" src="https://i.postimg.cc/RhKXtRwp/a20fa7fa0c256ea866ceffbc27989923.png" alt="Fondo flor" draggable="false" style="position:absolute; left:50%; top:-3vmin; transform:translateX(-50%); width:32vmin; height:32vmin; z-index:1; opacity:0.95; pointer-events:none; user-select:none;"/>
+  <img src="img/carro4.webp" alt="" style="width: 24vmin; height: 24vmin; border-radius: 50%; object-fit: cover; position: absolute; left: 50%; top: 0; transform: translateX(-50%); box-shadow: 0 2px 18px #0005; z-index: 10; animation: blooming-flower 2s 0.6s backwards;">
+      <div class="flower__line" style="animation: grow-flower-tree 4s 0.6s backwards;"></div>
+    </div>
+  <div class="flower flower--5" style="left: 40%; bottom: 15vmin; transform: rotate(-5deg); animation: moving-flower-5 4.5s linear infinite;" onclick="mostrarModalFlor(4)">
+  <img class="flower__img--bg" src="https://i.postimg.cc/RhKXtRwp/a20fa7fa0c256ea866ceffbc27989923.png" alt="Fondo flor" draggable="false" style="position:absolute; left:50%; top:-3vmin; transform:translateX(-50%); width:32vmin; height:32vmin; z-index:1; opacity:0.95; pointer-events:none; user-select:none;"/>
+  <img src="img/carro5.webp" alt="" style="width: 24vmin; height: 24vmin; border-radius: 50%; object-fit: cover; position: absolute; left: 50%; top: 0; transform: translateX(-50%); box-shadow: 0 2px 18px #0005; z-index: 10; animation: blooming-flower 2s 0.8s backwards;">
+      <div class="flower__line" style="animation: grow-flower-tree 4s 0.8s backwards;"></div>
+    </div>
+  <div class="flower flower--6" style="left: 60%; bottom: 19vmin; transform: rotate(5deg); animation: moving-flower-1 4s linear infinite;" onclick="mostrarModalFlor(5)">
+  <img class="flower__img--bg" src="https://i.postimg.cc/RhKXtRwp/a20fa7fa0c256ea866ceffbc27989923.png" alt="Fondo flor" draggable="false" style="position:absolute; left:50%; top:-3vmin; transform:translateX(-50%); width:32vmin; height:32vmin; z-index:1; opacity:0.95; pointer-events:none; user-select:none;"/>
+  <img src="img/carro6.jpg" alt="" style="width: 24vmin; height: 24vmin; border-radius: 50%; object-fit: cover; position: absolute; left: 50%; top: 0; transform: translateX(-50%); box-shadow: 0 2px 18px #0005; z-index: 10; animation: blooming-flower 2s 1s backwards;">
+      <div class="flower__line" style="animation: grow-flower-tree 4s 1s backwards;"></div>
+    </div>
+  <div class="flower flower--7" style="left: 70%; bottom: 17vmin; transform: rotate(10deg); animation: moving-flower-2 4s linear infinite;" onclick="mostrarModalFlor(6)">
+  <img class="flower__img--bg" src="https://i.postimg.cc/RhKXtRwp/a20fa7fa0c256ea866ceffbc27989923.png" alt="Fondo flor" draggable="false" style="position:absolute; left:50%; top:-3vmin; transform:translateX(-50%); width:32vmin; height:32vmin; z-index:1; opacity:0.95; pointer-events:none; user-select:none;"/>
+  <img src="img/carro7.jpg" alt="" style="width: 24vmin; height: 24vmin; border-radius: 50%; object-fit: cover; position: absolute; left: 50%; top: 0; transform: translateX(-50%); box-shadow: 0 2px 18px #0005; z-index: 10; animation: blooming-flower 2s 1.2s backwards;">
+      <div class="flower__line" style="animation: grow-flower-tree 4s 1.2s backwards;"></div>
+    </div>
+  <div class="flower flower--8" style="left: 80%; bottom: 21vmin; transform: rotate(20deg); animation: moving-flower-3 4s linear infinite;" onclick="mostrarModalFlor(7)">
+  <img class="flower__img--bg" src="https://i.postimg.cc/RhKXtRwp/a20fa7fa0c256ea866ceffbc27989923.png" alt="Fondo flor" draggable="false" style="position:absolute; left:50%; top:-3vmin; transform:translateX(-50%); width:32vmin; height:32vmin; z-index:1; opacity:0.95; pointer-events:none; user-select:none;"/>
+  <img src="img/carro8.webp" alt="" style="width: 24vmin; height: 24vmin; border-radius: 50%; object-fit: cover; position: absolute; left: 50%; top: 0; transform: translateX(-50%); box-shadow: 0 2px 18px #0005; z-index: 10; animation: blooming-flower 2s 1.4s backwards;">
+      <div class="flower__line" style="animation: grow-flower-tree 4s 1.4s backwards;"></div>
+    </div>
+  <div class="flower flower--9" style="left: 90%; bottom: 14vmin; transform: rotate(30deg); animation: moving-flower-4 3.5s linear infinite;" onclick="mostrarModalFlor(8)">
+  <img class="flower__img--bg" src="https://i.postimg.cc/RhKXtRwp/a20fa7fa0c256ea866ceffbc27989923.png" alt="Fondo flor" draggable="false" style="position:absolute; left:50%; top:-3vmin; transform:translateX(-50%); width:32vmin; height:32vmin; z-index:1; opacity:0.95; pointer-events:none; user-select:none;"/>
+  <img src="img/carro9.jpg" alt="" style="width: 24vmin; height: 24vmin; border-radius: 50%; object-fit: cover; position: absolute; left: 50%; top: 0; transform: translateX(-50%); box-shadow: 0 2px 18px #0005; z-index: 10; animation: blooming-flower 2s 1.6s backwards;">
+      <div class="flower__line" style="animation: grow-flower-tree 4s 1.6s backwards;"></div>
+    </div>
+  <div class="flower flower--10" style="left: 100%; bottom: 23vmin; transform: rotate(40deg); animation: moving-flower-5 4.5s linear infinite;" onclick="mostrarModalFlor(9)">
+  <img class="flower__img--bg" src="https://i.postimg.cc/RhKXtRwp/a20fa7fa0c256ea866ceffbc27989923.png" alt="Fondo flor" draggable="false" style="position:absolute; left:50%; top:-3vmin; transform:translateX(-50%); width:32vmin; height:32vmin; z-index:1; opacity:0.95; pointer-events:none; user-select:none;"/>
+  <img src="img/carro10.webp" alt="" style="width: 24vmin; height: 24vmin; border-radius: 50%; object-fit: cover; position: absolute; left: 50%; top: 0; transform: translateX(-50%); box-shadow: 0 2px 18px #0005; z-index: 10; animation: blooming-flower 2s 1.8s backwards;">
+      <div class="flower__line" style="animation: grow-flower-tree 4s 1.8s backwards;"></div>
+    </div>
+
+    <div class="growing-grass">
+      <div class="flower__grass flower__grass--1">
+        <div class="flower__grass--top"></div>
+        <div class="flower__grass--bottom"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--4"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--5"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--6"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--7"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--8"></div>
+        <div class="flower__grass__overlay"></div>
+      </div>
+    </div>
+
+<div class="growing-grass">
+      <div class="flower__grass flower__grass--2">
+        <div class="flower__grass--top"></div>
+        <div class="flower__grass--bottom"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--4"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--5"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--6"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--7"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--8"></div>
+        <div class="flower__grass__overlay"></div>
+      </div>
+    </div>
+
+    <div class="growing-grass">
+      <div class="flower__grass flower__grass--3">
+        <div class="flower__grass--top"></div>
+        <div class="flower__grass--bottom"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--4"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--5"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--6"></div>
+        <div class="flower__grass__overlay"></div>
+      </div>
+    </div>
+
+    <div class="growing-grass">
+      <div class="flower__grass flower__grass--4">
+        <div class="flower__grass--top"></div>
+        <div class="flower__grass--bottom"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--4"></div>
+        <div class="flower__grass__overlay"></div>
+      </div>
+    </div>
+
+    <div class="growing-grass">
+      <div class="flower__grass flower__grass--5">
+        <div class="flower__grass--top"></div>
+        <div class="flower__grass--bottom"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--4"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--5"></div>
+        <div class="flower__grass__overlay"></div>
+      </div>
+    </div>
+
+    <div class="growing-grass">
+      <div class="flower__grass flower__grass--6">
+        <div class="flower__grass--top"></div>
+        <div class="flower__grass--bottom"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--4"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--5"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--6"></div>
+        <div class="flower__grass__overlay"></div>
+      </div>
+    </div>
+
+    <div class="growing-grass">
+      <div class="flower__grass flower__grass--7">
+        <div class="flower__grass--top"></div>
+        <div class="flower__grass--bottom"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--4"></div>
+        <div class="flower__grass__overlay"></div>
+      </div>
+    </div>
+
+    <div class="growing-grass">
+      <div class="flower__grass flower__grass--8">
+        <div class="flower__grass--top"></div>
+        <div class="flower__grass--bottom"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--4"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--5"></div>
+        <div class="flower__grass__overlay"></div>
+      </div>
+    </div>
+
+    <div class="growing-grass">
+      <div class="flower__grass flower__grass--9">
+        <div class="flower__grass--top"></div>
+        <div class="flower__grass--bottom"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+        <div class="flower__grass__overlay"></div>
+      </div>
+    </div>
+
+    <div class="growing-grass">
+      <div class="flower__grass flower__grass--10">
+        <div class="flower__grass--top"></div>
+        <div class="flower__grass--bottom"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+        <div class="flower__grass__overlay"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- música -->
+  <audio id="bgMusic" src="musica/💖🌸Cada Segundo Es Un Sueño ｜ Amanecer Contigo🌟.mp3"></audio>
+
+  <!-- tarjeta -->
+  <div class="card" id="card" style="display:none;">
+    <div class="left">
+      <h1>Hot wheels</h1>
+      <p class="small-text">Feliz <strong>30 de septiembre</strong> ❤</p>
+      <p>Esto es para ti mi amor, espero te haya gustado Te amo mucho❤️. Pulsa el botón para abrir una sorpresa.</p>
+      <div class="cta">
+        <button class="btn" id="openBtn">¡Da click aquí!</button>
+    
+      </div>
+    </div>
+  <div class="right">
+    <div class="card-art">
+      <img src="img/amor.jpg" alt="Foto especial" style="max-width:100%; border-radius:12px;">
+    </div>
+    <!-- 👇 Ahora el texto va debajo de la foto -->
+    <p class="small-text">Diseñado con el ❤️ de tu hermosa novia</p>
+  </div>
+</div>
+
+  <!-- Botón para ir a la tarjeta -->
+<button id="goToCardBtn" class="btn" style="position:absolute; bottom:40px; left:50%; transform:translateX(-50%); z-index:9999;">
+  Ver tarjeta
+</button>
+
+
+  <div class="particles"></div>
+
+  <!-- modal -->
+  <div class="modal" id="modal">
+    <div class="modal-box">
+      <h2>¡Sorpresa!</h2>
+      <div class="surprise">Espero que tengas un día increíble Te amo mucho 🏎️🛣️</div>
+      <button class="btn" id="closeBtn">Cerrar</button>
+    </div>
+  </div>
+
+  <div class="confetti" id="confetti"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
